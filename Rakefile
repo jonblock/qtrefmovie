@@ -5,9 +5,9 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "qtrefmovie"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "jonblock@alumni.princeton.edu"
+    gem.summary = %Q{Simple code for generating QuickTime Reference Movies from Ruby}
+    gem.description = %Q{QTRefMovie is a simple tool for generating QuickTime Reference Movie files from a Ruby script.}
+    gem.email = "jonblock@jonblock.com"
     gem.homepage = "http://github.com/jonblock/qtrefmovie"
     gem.authors = ["Jonathan Block"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"

@@ -1,6 +1,62 @@
-= qtrefmovie
+= QTRefMovie
 
-Description goes here.
+QTRefMovie is based on PHPRefMovie Copyright (C) 2003 Juergen Enge (GPL V2 or later)
+http://www.phpclasses.org/browse/file/7719.html
+juergen@info-age.net
+
+Most of the code design and code comments are Juergen's.
+I just translated it to Ruby, simplified usage, and made it a Ruby Gem.
+
+
+== Usage
+
+* Install the qtrefmovie gem
+
+* Load the library (some or all may not be needed)
+    require 'rubygems'
+    gem 'qtrefmovie'
+    require 'lib/qtrefmovie'
+
+* Make a reference movie
+    movie = QTRefMovie::QTMovie.new [{:reference => "rtsp://127.0.0.1:80/test.mov",
+                                      :data_rate => 'intranet',
+                                      :cpu_speed => 'fast'},
+                                     {:reference => "rtsp://127.0.0.1:80/test2.mov",
+                                      :data_rate => 't1',
+                                      :quality   => 650}]
+    File.open("refmovie.mov", "w") { |f| f.write movie.to_s }
+
+* Make the reference movie useful
+    This part's up to you
+
+
+== Options
+
+You can have as many movie references as you'd like within a reference movie.  The QuickTime client will consider the parameters of each reference, as well as its own settings, to decide which reference to actually load.
+
+Each reference may have the following parameters:
+
+  reference:: (required) A URL pointing to a distinct version of the movie available somewhere online
+              Any URL accessible to the client and playable by QuickTime
+  
+  data_rate:: (optional) The minimum connection speed for displaying this version
+              A 32-bit number, or:  '28.8 modem', '56k modem', 'isdn', 'dual isdn',
+              '256 kbps', '384 kbps', '512 kbps', '768 kbps', '1 mbps', 't1', 'intranet'
+  
+  cpu_speed:: (optional) An indicator of processor capability needed to view this version
+              A 32-bit number divisible by 100, or:  'very slow', 'slow', 'medium', 'fast', 'very fast'
+  
+  quality::   (optional) A relative measure of the quality of this version compared to others referenced
+              A 32-bit number
+
+
+== More Information
+
+Juergen provided detailed comments with the code, which I have maintained intact.
+
+Apple's QuickTime File Format Specification is currently available at this URL:
+http://developer.apple.com/mac/library/documentation/QuickTime/QTFF/
+
 
 == Note on Patches/Pull Requests
  
@@ -11,6 +67,7 @@ Description goes here.
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
+
 
 == Copyright
 
