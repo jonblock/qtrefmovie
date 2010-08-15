@@ -1,12 +1,13 @@
-# Copyright (c) 2010 Jonathan Block
-# jonblock@jonblock.com
-# Based on PHPRefMovie Copyright (C) 2003 Juergen Enge (GPL V2 or later)
-# http://www.phpclasses.org/browse/file/7719.html
+# Copyright (c) 2010 Jonathan Block  
+# jonblock@jonblock.com  
+# Based on PHPRefMovie Copyright (C) 2003 Juergen Enge (GPL V2 or later)  
+# http://www.phpclasses.org/browse/file/7719.html  
 # juergen@info-age.net
 #
-# Translated to Ruby 2010 by Jonathan Block
-# Most of the code design and code comments are Juergen's.
-# I just translated it to Ruby, simplified usage, and made it a Ruby Gem.
+# Translated to Ruby 2010 by Jonathan Block  
+# Most of the code design is Juergen's.  
+# Most code comments are from Apple's QuickTime File Format specification.  
+# I just translated it to Ruby, simplified usage, and made it a Ruby Gem.  
 # Please see the README.
 
 

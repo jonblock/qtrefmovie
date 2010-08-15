@@ -1,11 +1,12 @@
 = QTRefMovie
 
-QTRefMovie is based on PHPRefMovie Copyright (C) 2003 Juergen Enge (GPL V2 or later)
-http://www.phpclasses.org/browse/file/7719.html
+QTRefMovie is based on PHPRefMovie Copyright (C) 2003 Juergen Enge (GPL V2 or later)  
+http://www.phpclasses.org/browse/file/7719.html  
 juergen@info-age.net
 
-Most of the code design and code comments are Juergen's.
-I just translated it to Ruby, simplified usage, and made it a Ruby Gem.
+Most of the code design is Juergen's.  
+Most code comments are from Apple's QuickTime File Format specification.  
+I just translated the code to Ruby, simplified usage, and made it a Ruby Gem.
 
 
 == Usage
@@ -53,6 +54,7 @@ Each reference may have the following parameters:
 == More Information
 
 Juergen provided detailed comments with the code, which I have maintained intact.
+These are largely from Apple's QuickTime File Format specification.  
 
 Apple's QuickTime File Format Specification is currently available at this URL:
 http://developer.apple.com/mac/library/documentation/QuickTime/QTFF/
